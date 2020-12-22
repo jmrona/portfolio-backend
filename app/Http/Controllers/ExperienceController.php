@@ -56,6 +56,7 @@ class ExperienceController extends Controller
         $experience->visible = $request->visible;
         $experience->sort = $request->sort;
         $experience->img = $request->img;
+        $experience->urlWebsite = $request->urlWebsite;
         $experience->save();
 
         return response()->json([
@@ -99,6 +100,7 @@ class ExperienceController extends Controller
         $experience->visible = $request->visible;
         $experience->sort = $request->sort;
         $experience->img = $request->img;
+        $experience->urlWebsite = $request->urlWebsite;
 
         $experience->save();
 
