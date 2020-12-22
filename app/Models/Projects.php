@@ -17,4 +17,20 @@ class Projects extends Model
     protected $table = 'projects';
 
     public $timestamps = false;
+
+    protected $fillable = [
+        'img',
+        'skills',
+        'title',
+        'description',
+        'urlRepository',
+        'urlWebsite',
+        'visible',
+        'sort',
+    ];
+
+    protected $casts = [
+     'skills' => 'array'
+   ];
+
 }

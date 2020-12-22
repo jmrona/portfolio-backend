@@ -49,16 +49,18 @@ class ProjectsController extends Controller
             ]);
         }
 
-        $projects = new Projects;
-        $projects->img = $request->img;
-        $projects->title = $request->title;
-        $projects->description = $request->description;
-        $projects->urlRepository = $request->urlRepository;
-        $projects->urlWebsite = $request->urlWebsite;
-        $projects->visible = $request->visible;
-        $projects->sort = $request->sort;
-        $projects->save();
+        $project = new Projects;
+        $project->img = $request->img;
+        $project->skills = $request->skills;
+        $project->title = $request->title;
+        $project->description = $request->description;
+        $project->urlRepository = $request->urlRepository;
+        $project->urlWebsite = $request->urlWebsite;
+        $project->visible = $request->visible;
+        $project->sort = $request->sort;
+        $project->save();
 
+        return $project;
         return response()->json([
             'status' => 200,
             'message' => 'Project created succesfully'
@@ -94,6 +96,7 @@ class ProjectsController extends Controller
         $project = Projects::where('id', $id)->first();
 
         $project->img = $request->img;
+        $project->skills = $request->skills;
         $project->title = $request->title;
         $project->description = $request->description;
         $project->urlRepository = $request->urlRepository;
