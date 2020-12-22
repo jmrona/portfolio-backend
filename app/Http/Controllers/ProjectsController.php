@@ -60,7 +60,6 @@ class ProjectsController extends Controller
         $project->sort = $request->sort;
         $project->save();
 
-        return $project;
         return response()->json([
             'status' => 200,
             'message' => 'Project created succesfully'
