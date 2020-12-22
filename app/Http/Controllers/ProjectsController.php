@@ -36,9 +36,6 @@ class ProjectsController extends Controller
             'img'=> 'required',
             'title' => 'required',
             'description' => ' required',
-            'urlRepository' => 'required',
-            'urlWebsite' => 'required',
-            'visible' => 'required|boolean',
             'sort' => 'required|numeric',
         ]);
 
