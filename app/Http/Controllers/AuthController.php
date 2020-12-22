@@ -35,6 +35,7 @@ class AuthController extends Controller
             'status' => 200,
             'message' => 'User registered succesfully'
         ]);
+
     }
 
     public function login( Request $request ){
