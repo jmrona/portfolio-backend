@@ -19,9 +19,9 @@ class CreateProjectsTable extends Migration
             $table->json('skills')->nullable();
             $table->string('title');
             $table->longText('description');
-            $table->string('urlRepository');
-            $table->string('urlWebsite');
-            $table->boolean('visible');
+            $table->string('urlRepository')->nullable();
+            $table->string('urlWebsite')->nullable();
+            $table->boolean('visible')->default('1');
             $table->integer('sort');
         });
     }
